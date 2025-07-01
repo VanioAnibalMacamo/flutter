@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget{
 
+  String nome = "Vanio Anibal Macamo";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Vanio Macamoo",
+          nome,
           style: TextStyle(color: Colors.cyan),
           
           ),
@@ -26,7 +27,11 @@ class HomePage extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-             Text("Teste"),
+             Center(
+                child: FloatingActionButton(onPressed:() {
+                  nome = "AAAA";
+                }),
+             ),
              SizedBox(height: 50,),
              Text("Teste"),
              Text("Teste"),
